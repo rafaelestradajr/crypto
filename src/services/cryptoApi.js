@@ -1,9 +1,9 @@
-import create from "@ant-design/icons/lib/components/IconFont";
+//import create from "@ant-design/icons/lib/components/IconFont";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const cryptoApiHeaders = {
   "x-rapidapi-host": "coinranking1.p.rapidapi.com",
-  "x-rapidapi-key": 
+  
 };
 
 const baseUrl = "https://coinranking1.p.rapidapi.com";
@@ -16,6 +16,10 @@ export const cryptoApi = createApi({
     getCryptos: builder.query({
       query: (count) => createRequest(`/coins?limit=${count}`),
     }),
+    getCryptoDetails:builder.query({
+      query:(coinId) => createRequest(`/coin/${coinId}`), 
+     
+    }),
   }),
 });
-export const { useGetCryptosQuery } = cryptoApi;
+export const { useGetCryptosQuery,useGetCryptoDetailsQuery } = cryptoApi;

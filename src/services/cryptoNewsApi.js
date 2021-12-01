@@ -4,7 +4,7 @@ const cryptoNewsHeaders =  {
   'x-bingapis-sdk': 'true',
   'x-rapidapi-host':'bing-news-search1.p.rapidapi.com',
   
-};
+}
 
         const baseUrl = 'https://bing-news-search1.p.rapidapi.com';
 
