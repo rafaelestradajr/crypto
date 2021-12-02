@@ -21,6 +21,7 @@ const News = ({simplified}) => {
     return (
         <Row gutter={[24,24]}>
             {!simplified &&(
+                <Col span={24}>
                 <Select
                 showSearch
                 className='select-news'
@@ -34,6 +35,7 @@ const News = ({simplified}) => {
                     {data?.data?.coins.map((coin)=> <Option value={coin.name}>{coin.name}</Option>)}
 
                 </Select>
+                </Col>
 
             )}
             {cryptoNews.value.map((news,i) => (
